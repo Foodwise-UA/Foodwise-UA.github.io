@@ -12,14 +12,14 @@
     <title>Foodwise</title>
   </head>
   <body>
-    <header class="header">
-      <nav class="header__nav">
+    <header id="header" class="header">
+      <nav class="header__nav active">
         <div class="nav__container">
           <div class="nav__block">
-            <h1 class="nav-logo">Foodwise</h1>
+            <h1 class="nav-logo"><a href="#header" class="yakor">Foodwise</a></h1>
             <ul class="nav-list">
-              <li class="nav-link"><a>How it works?</a></li>
-              <li class="nav-link"><a>Contacts</a></li>
+              <li class="nav-link"><a href="#work" class="yakor">How it works?</a></li>
+              <li class="nav-link"><a href="#contact" class="yakor">Contacts</a></li>
             </ul>
           </div>
           <div class="nav__block">
@@ -60,13 +60,13 @@
       </div>
     </header>
 
-    <div class="work">
+    <div id="work" class="work">
       <div class="container">
         <div class="work__block">
           <div class="work__images">
             <div
               class="work__main-image"
-              style="background-image: url('img/step1-1 (2).png')"
+              style="background-image: url('img/step1-1.svg')"
             ></div>
             <div class="work__additional-image"></div>
           </div>
@@ -83,7 +83,7 @@
           <div class="work__images">
             <div
               class="work__main-image"
-              style="background-image: url('img/step2-1 (2).png')"
+              style="background-image: url('img/step2-1.svg')"
             ></div>
             <div class="work__additional-image"></div>
           </div>
@@ -100,7 +100,7 @@
           <div class="work__images">
             <div
               class="work__main-image"
-              style="background-image: url('img/step3-1.png')"
+              style="background-image: url('img/step3-1.svg')"
             ></div>
             <div class="work__additional-image"></div>
           </div>
@@ -165,7 +165,7 @@
       </div>
     </div>
 
-    <div class="contact">
+    <div id="contact" class="contact">
       <div class="container">
         <h2 class="contact-title">Try Foodwise!</h2>
         <div class="contact__inner">
@@ -186,15 +186,17 @@
             <p class="footer-subtitle">© Foodwise 2023</p>
           </div>
           <div class="footer__social">
-            <a href=""
-              ><img class="footer__social-item" src="img/linkedin.png" alt=""
+            <a href="https://www.linkedin.com/company/foodwiseua/" target="_blank"
+              ><img class="footer__social-item" src="img/linkedIn.svg" alt=""
             /></a>
-            <a href=""
-              ><img class="footer__social-item" src="img/telegram.png" alt=""
+            <a href="https://t.me/yanbergs_mary" target="_blank"
+              ><img class="footer__social-item" src="img/telegram.svg" alt=""
             /></a>
           </div>
         </div>
       </div>
     </footer>
+
+    <script src="script/index.js"></script>
   </body>
 </html>

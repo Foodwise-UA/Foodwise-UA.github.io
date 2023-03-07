@@ -21,6 +21,11 @@ a {
   cursor: pointer;
 }
 
+a {
+  color: #000;
+  text-decoration: none;
+}
+
 body,
 html {
   width: 100%;
@@ -40,6 +45,18 @@ html {
 }
 
 .header__nav {
+  opacity: 0;
+  transform: translateY(-100px);
+  position: fixed;
+  width: 100%;
+  background-color: #fff;
+  z-index: 999;
+  transition: all 0.4s ease-in;
+}
+
+.header__nav.active {
+  opacity: 1;
+  transform: translateY(0);
   position: fixed;
   width: 100%;
   background-color: #fff;
@@ -63,6 +80,9 @@ html {
   font-size: 32px;
   font-weight: 700;
   cursor: pointer;
+  background: -webkit-linear-gradient(left, #589db6, #afd0d3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .nav-list {
@@ -106,7 +126,7 @@ html {
 }
 
 .header__info {
-  padding-top: 175px;
+  padding-top: 115px;
   max-width: 530px;
 }
 
@@ -162,9 +182,9 @@ html {
   align-items: center;
 }
 
-/* .images__block {
-  margin-top: 129px;
-} */
+.images__block {
+  margin-right: 57px;
+}
 
 .header-first-image {
   position: relative;
@@ -174,6 +194,7 @@ html {
   background-image: url('../img/header-1.png');
   background-repeat: no-repeat;
   background-size: auto;
+  border-radius: 14px;
 }
 
 .header-second-image {
@@ -183,6 +204,7 @@ html {
   background-image: url('../img/header-2.png');
   background-repeat: no-repeat;
   background-size: auto;
+  border-radius: 14px;
 }
 
 .image-discount {
@@ -204,9 +226,9 @@ html {
 .header-third-image {
   width: 376px;
   height: 734px;
-  background-image: url('../img/header-3 (2).png');
+  background-image: url('../img/header-3_2.png');
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
 }
 
 .work {
@@ -250,7 +272,7 @@ html {
 }
 
 .work__block:nth-child(1) .work__additional-image {
-  background-image: url('../img/step1-2 (2).png');
+  background-image: url('../img/step1-2.svg');
   width: 348px;
   height: 255px;
   margin-left: 19px;
@@ -457,6 +479,10 @@ html {
     height: 183px;
   }
 
+  .images__block {
+    margin-right: 37px;
+  }
+
   .image-discount {
     width: 70px;
     height: 35px;
@@ -519,17 +545,21 @@ html {
     padding: 0 10px;
   }
   .nav__container {
-    padding: 70px 27px 26px 27px;
+    padding: 33px 27px;
   }
   .nav-list {
     display: none;
+  }
+
+  .header__block {
+    padding-top: 100px;
   }
 
   .header__inner {
     flex-direction: column;
   }
   .header__info {
-    padding-top: 56px;
+    padding-top: 46px;
     text-align: center;
   }
   .header-title {
@@ -548,6 +578,7 @@ html {
 
   .header__images {
     margin: 40px auto;
+    display: block;
   }
 
   .header-first-image,
@@ -558,6 +589,7 @@ html {
   .header-third-image {
     width: 290px;
     height: 535px;
+    background-position-x: center;
   }
 
   .work {
@@ -635,7 +667,7 @@ html {
 
   .contact__inner {
     text-align: center;
-    padding-bottom: 90px;
+    padding-bottom: 30px;
   }
 
   .email-title {
@@ -671,7 +703,8 @@ html {
     padding: 0 20px;
   }
   .footer__inner {
-    padding-top: 22px;
+    padding-top: 30px;
+    padding-bottom: 40px;
   }
 
   .footer-title {
