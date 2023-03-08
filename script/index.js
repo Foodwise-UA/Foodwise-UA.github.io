@@ -31,6 +31,12 @@ window.addEventListener('scroll', function (event) {
     navBar.classList.add('active');
   }
 
+  if (currentPosition > 50) {
+    navBar.classList.add('shadow');
+  } else {
+    navBar.classList.remove('shadow');
+  }
+
   topPosition = currentPosition;
 });
 
