@@ -1,3 +1,5 @@
+let navBar = document.querySelector('nav.header__nav');
+
 document.querySelectorAll('a.yakor').forEach((link) => {
   link.addEventListener('click', function (event) {
     event.preventDefault();
@@ -17,15 +19,15 @@ document.querySelectorAll('a.yakor').forEach((link) => {
   });
 });
 
+
 let topPosition = document.scrollY;
-let navBar = document.querySelector('nav.header__nav');
 
 window.addEventListener('scroll', function (event) {
   event.preventDefault();
 
   let currentPosition = this.scrollY;
 
-  if (currentPosition > topPosition) {
+  if (currentPosition > topPosition && currentPosition > 90) {
     navBar.classList.remove('active');
   } else if (currentPosition < topPosition) {
     navBar.classList.add('active');
