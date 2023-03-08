@@ -226,7 +226,7 @@ html {
 .header-third-image {
   width: 376px;
   height: 734px;
-  background-image: url('../img/header-3_2.png');
+  background-image: url('../img/header-3.svg');
   background-repeat: no-repeat;
   background-size: contain;
 }
