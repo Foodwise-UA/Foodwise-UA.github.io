@@ -157,6 +157,10 @@ html {
 }
 
 .header-button {
+  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 468px;
   height: 87px;
   font-size: 32px;
@@ -579,6 +583,7 @@ html {
     height: 57px;
     border-radius: 14px;
     font-size: 20px;
+    margin: 0 auto;
   }
 
   .header__images {
