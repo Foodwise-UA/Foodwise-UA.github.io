@@ -424,9 +424,19 @@ html {
   font-size: 32px;
   font-weight: 700;
   background-size: 100%;
-  transition: background-size 0.3s ease-in;
+  transition: all 0.3s ease-in;
   -moz-transition: background-size 0.3s ease-in;
   -web-kit-transition: background-size 0.3s ease-in;
+}
+
+.form-button.success {
+  background: inherit;
+  background-color: #21A072;
+}
+
+.form-button.error {
+  background: inherit;
+  background-color: #FF3E3E;
 }
 
 .form-button:hover {
