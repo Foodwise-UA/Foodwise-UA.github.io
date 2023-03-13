@@ -371,11 +371,25 @@ html {
   margin-top: 180px;
 }
 
+/* .contact__container {
+  margin: 0 auto;
+  width: 550px;
+} */
+
 .contact-title {
   font-size: 48px;
   font-weight: 700;
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 51px;
+}
+
+.contact-subtitle {
+  max-width: 550px;
+  margin: 0 auto;
+  font-size: 26px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 51px;
 }
 
 .contact__inner {
@@ -406,6 +420,22 @@ html {
   outline: none;
 }
 
+.email-validator-text {
+  display: none;
+}
+
+.email-validator-text.active {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 8px;
+  display: block;
+  font-size: 22px;
+  font-weight: 600;
+  color: #ee2a2a;
+  text-align: center;
+}
+
 .form-button {
   width: 528px;
   height: 90px;
@@ -431,12 +461,14 @@ html {
 
 .form-button.success {
   background: inherit;
-  background-color: #21A072;
+  background: linear-gradient(90deg, #30c77d 0%, #82f4b1 100%);
+  background-size: 100%;
 }
 
 .form-button.error {
   background: inherit;
-  background-color: #FF3E3E;
+  background: linear-gradient(90deg, #ee2a2a 0%, #f59e81 100%);
+  background-size: 100%;
 }
 
 .form-button:hover {
@@ -555,6 +587,10 @@ html {
     width: 215px;
     height: 355px;
     margin-left: 26px;
+  }
+
+  .contact-subtitle {
+    font-size: 23px;
   }
 }
 
@@ -695,6 +731,10 @@ html {
     margin-bottom: 44px;
   }
 
+  .contact-subtitle {
+    font-size: 20px;
+  }
+
   .contact__inner {
     text-align: center;
     padding-bottom: 30px;
@@ -712,10 +752,19 @@ html {
     font-size: 20px;
   }
 
+  .email-validator-text.active {
+    margin-top: 3px;
+    margin-bottom: 6px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #ee2a2a;
+    text-align: center;
+  }
+
   .form-button {
     width: 311px;
     height: 57px;
-    margin-top: 23px;
+    margin-top: 35px;
     border-radius: 14px;
     font-size: 20px;
     background-size: 100%;
