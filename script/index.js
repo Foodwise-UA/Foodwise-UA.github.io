@@ -55,7 +55,7 @@ const validateEmail = (email) => {
 function getUserEmail() {
   const emailInput = document.querySelector('.email-input');
   const formButton = document.querySelector('.form-button');
-  const emailValidatorText = document.querySelector('.email-validator-text')
+  const emailValidatorText = document.querySelector('.email-validator-text');
 
   formButton.addEventListener('click', function (event) {
     event.preventDefault();
@@ -81,6 +81,7 @@ function getUserEmail() {
     }
   });
 }
+
 
 window.onload = function () {
   smoothScroll();
