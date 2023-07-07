@@ -80,6 +80,28 @@ html {
   gap: 70px;
 }
 
+.nav__block-input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.nav__input-label {
+  font-size: 24px;
+  font-family: 'Gilroy', sans-serif;
+  font-weight: 600;
+  text-decoration: underline;
+  cursor: pointer;
+  margin-left: 16px;
+}
+
+input[type='radio']:checked + label {
+  font-weight: 700;
+  font-size: 24px;
+  font-family: 'Gilroy', sans-serif;
+  text-decoration: none;
+}
+
 .nav-logo {
   font-size: 32px;
   font-weight: 700;
@@ -98,7 +120,7 @@ html {
 
 .nav-link {
   font-size: 24px;
-  /* font-family: 'Gilroy', sans-serif;; */
+  font-family: 'Gilroy', sans-serif;
   font-weight: 600;
   text-decoration: underline;
 }
@@ -237,7 +259,6 @@ html {
 .header-third-image {
   width: 376px;
   height: 734px;
-  background-image: url('../img/header-3.png');
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -283,14 +304,12 @@ html {
 }
 
 .work__block:nth-child(1) .work__additional-image {
-  background-image: url('../img/step1-2.png');
   width: 348px;
   height: 255px;
   margin-left: 19px;
 }
 
 .work__block:nth-child(2) .work__additional-image {
-  background-image: url('../img/step2-2.png');
   width: 295px;
   height: 415px;
   margin-right: 56px;
@@ -367,6 +386,7 @@ html {
   color: #fff;
   font-weight: 700;
   text-shadow: 0px 4px 12px rgba(0, 0, 0, 0.75);
+  text-align: center;
 }
 
 .contact {

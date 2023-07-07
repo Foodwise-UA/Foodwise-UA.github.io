@@ -82,9 +82,64 @@ function getUserEmail() {
   });
 }
 
+function getSelectedRadioButton(className) {
+  const radioButtons = document.querySelectorAll(`.${className}`);
+
+  for (let i = 0; i < radioButtons.length; i++) {
+    if (radioButtons[i].checked) {
+      return radioButtons[i];
+    }
+  }
+
+  return null;
+}
+
+const radioButtons = document.querySelectorAll('.nav__block-input');
+radioButtons.forEach((item) =>
+  item.addEventListener('change', changeURLLanguage)
+);
+
+function changeURLLanguage() {
+  let lang = getSelectedRadioButton('nav__block-input').id;
+  location.href = window.location.pathname + '#' + lang;
+  location.reload();
+}
+
+function changeLanguage() {
+  const allLang = ['ua', 'en'];
+
+  let hash = window.location.hash;
+  hash = hash.substring(1);
+
+  if (!allLang.includes(hash)) {
+    location.href = window.location.pathname + '#ua';
+    location.reload();
+  }
+
+  let selectedLanguage = document.querySelector(`#${hash}`);
+  console.log(selectedLanguage);
+  selectedLanguage.checked = true;
+
+  for (let key in langArr) {
+    document.querySelector(`.lng-${key}`).innerHTML = langArr[key][hash];
+  }
+
+  console.log(langImgArr);
+
+  for (let key in langImgArr) {
+    const image = document.querySelector(`.lng-${key}`);
+    // console.log(image.style.backgroundImage);
+    // console.log(`url("${langImgArr[key][hash]}")`)
+
+    document.querySelector(
+      `.lng-${key}`
+    ).style.backgroundImage = `url("${langImgArr[key][hash]}")`;
+  }
+}
 
 window.onload = function () {
   smoothScroll();
   changeNavBar();
   getUserEmail();
+  changeLanguage();
 };
